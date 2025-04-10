@@ -1,0 +1,719 @@
+
+
+
+  <!-- Línea de base y marco para las bandas de colores -->
+  <rect x="50" y="120" width="700" height="60" fill="white" stroke="#ddd" stroke-width="1" />
+</svg>
+
+
+
+  <!-- Línea de base y marco para las bandas de colores -->
+  <rect x="50" y="120" width="700" height="60" fill="white" stroke="#ddd" stroke-width="1" />
+  
+  <!-- Definiciones de degradados para las bandas con efecto 3D -->
+  <defs>
+    <!-- Degradados verdes en diferentes tonalidades para efecto 3D -->
+    <linearGradient id="no-satisfactorio" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a5d6a7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#81c784;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66bb6a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="satisfactorio" x1="0%" y1="0%" x2="0%" y2="100%">
+            <!-- Icono de sustentabilidad -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte ECOS - Universidad Iberoamericana CDMX</title>
+  <style>
+    :root {
+      --primary: #EF4044; /* Rojo IBERO PMS 185 */
+      --secondary: #9A8B7D; /* Gris IBERO PMS WARM GRAY 9 */
+      --accent: #3a7e3d; /* Verde sustentabilidad */
+      --light-bg: #f8f9fa;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-family);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: var(--light-bg);
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    
+    .header {
+      background-color: white;
+      color: #333;
+      padding: 25px 30px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 50%, rgba(239,64,68,0.05) 100%);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      max-width: 180px;
+      height: auto;
+    }
+    
+    .sustainability-logo {
+      width: 80px;
+      height: 80px;
+      margin-left: 15px;
+    }
+    
+    .header-divider {
+      height: 3px;
+      background: var(--primary);
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    .title-container {
+      flex-grow: 1;
+    }
+    
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.9;
+      font-weight: 300;
+      color: var(--secondary);
+    }
+    
+    .info-box {
+      padding: 25px 30px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    
+    .info-label {
+      font-weight: bold;
+      min-width: 170px;
+      color: var(--primary);
+    }
+    
+    h2 {
+      color: var(--primary);
+      font-size: 22px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    h3 {
+      color: var(--secondary);
+      font-size: 18px;
+      margin: 18px 0 10px 0;
+    }
+    
+    .summary-box {
+      background-color: rgba(58, 126, 61, 0.1);
+      padding: 25px 30px;
+      border-left: 5px solid var(--accent);
+    }
+    
+    .score-highlight {
+      display: inline-block;
+      font-size: 24px;
+      color: var(--primary);
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    
+    .achievement-level {
+      display: inline-block;
+      padding: 5px 12px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 20px;
+      font-weight: bold;
+      margin: 5px 0 15px 0;
+    }
+    
+    .performance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .performance-box {
+      border: 1px solid #eee;
+      border-radius: var(--border-radius);
+      padding: 20px;
+      box-shadow: var(--box-shadow);
+      background-color: white;
+      transition: transform 0.2s;
+    }
+    
+    .performance-box:hover {
+      transform: translateY(-3px);
+    }
+    
+    .performance-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--secondary);
+    }
+    
+    .performance-score {
+      padding: 3px 10px;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+    }
+    
+    .area1 { background-color: #9b59b6; }
+    .area2 { background-color: #3498db; }
+    .area3 { background-color: #1abc9c; }
+    .area4 { background-color: #f39c12; }
+    
+    .bar-container {
+      margin-top: 20px;
+    }
+    
+    .bar-label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    
+    .bar-outer {
+      background-color: #eee;
+      height: 18px;
+      width: 100%;
+      border-radius: 9px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .bar-inner {
+      height: 100%;
+      border-radius: 9px;
+      position: relative;
+      transition: width 1s;
+    }
+    
+    .bar-inner.area1 { background-color: #9b59b6; }
+    .bar-inner.area2 { background-color: #3498db; }
+    .bar-inner.area3 { background-color: #1abc9c; }
+    .bar-inner.area4 { background-color: #f39c12; }
+    
+    .bar-text {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 18px;
+    }
+    
+    .performance-line-chart {
+      padding: 30px;
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      margin: 30px 0;
+    }
+    
+    .performance-line-chart svg {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+    }
+    
+    .recommendation-box {
+      margin-top: 30px;
+      padding: 25px;
+      border: none;
+      border-radius: var(--border-radius);
+      background-color: white;
+      box-shadow: var(--box-shadow);
+    }
+    
+    .recommendation-box h2 {
+      color: var(--secondary);
+    }
+    
+    .recommendation-box h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .recommendation-box h3 span {
+      color: var(--accent);
+    }
+    
+    .recommendation-box ul {
+      margin-left: 25px;
+      margin-top: 15px;
+    }
+    
+    .recommendation-box li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    
+    .recommendation-box li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: -15px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      
+      .performance-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .info-label {
+        min-width: 100%;
+      }
+      
+      .header {
+        padding: 20px;
+      }
+      
+      .title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title-container">
+        <div class="logo-container">
+          <!-- Logo principal IBERO -->
+<!-- Logo principal IBERO -->
+<img src="Ibero1.png" alt="Universidad Iberoamericana" class="logo">          <!-- Logo de sustentabilidad -->
+  <img src="Logo sustentabilidad.png" alt="Logo sustentabilidad" class="sustainability-logo">
+</div>
+          
+        </div>
+        <div class="title">Reporte de Evaluación de Competencias para la Sustentabilidad</div>
+        <div class="subtitle">ECOS - Universidad Iberoamericana Ciudad de México</div>
+      </div>
+    </div>
+
+    <div class="info-box" style="background-color: white; border-radius: 10px; box-shadow: var(--box-shadow); padding: 0; overflow: hidden;">
+      <div style="background-color: var(--primary); color: white; padding: 12px 20px; display: flex; align-items: center; gap: 12px;">
+        <div style="background-color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <h2 style="margin: 0; font-size: 20px;">Información del Estudiante</h2>
+      </div>
+      
+      <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="color: var(--primary); flex-shrink: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div><span class="info-label">Nombre:</span> María González Rodríguez</div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="color: var(--primary); flex-shrink: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div><span class="info-label">Fecha de evaluación:</span> 27 de marzo de 2025</div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="color: var(--primary); flex-shrink: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div><span class="info-label">ID:</span> 12345678</div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="color: var(--primary); flex-shrink: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div><span class="info-label">Periodo:</span> Primavera 2025</div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="color: var(--primary); flex-shrink: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div><span class="info-label">Programa Académico:</span> Ingeniería Ambiental</div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="color: var(--primary); flex-shrink: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 1 12 24c-2.783 0-5.35-.927-7.406-2.499a12.078 12.078 0 0 1-2.29-2.44 11.947 11.947 0 0 1-1.65-3.001 12.077 12.077 0 0 1 .665-6.479L12 14z"></path>
+            </svg>
+          </div>
+          <div><span class="info-label">Semestre del estudiante:</span> 6</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <h2>Resumen de Resultados</h2>
+      <p>Has completado la Evaluación de Competencias para la Sustentabilidad (ECOS), que evalúa tu comprensión y capacidad para aplicar principios de sustentabilidad en diferentes contextos.</p>
+      <div><span class="score-highlight">Score Global: 1013</span></div>
+      <div><span class="achievement-level">Nivel de logro: Satisfactorio</span></div>
+    </div>
+  </div>
+
+  <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo y título -->
+  <rect x="0" y="0" width="800" height="300" fill="#f8f9fa" rx="10" ry="10" />
+  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Nivel de logro sobre línea de desempeño</text>
+  
+  <!-- Barras simples para los tres niveles - todas en verde pero con diferentes tonalidades -->
+  <rect x="50" y="150" width="316" height="60" fill="#d8f3d8" stroke="#c1e1c1" stroke-width="1" />
+  <rect x="366" y="150" width="150" height="60" fill="#a5d6a7" stroke="#81c784" stroke-width="1" />
+  <rect x="516" y="150" width="234" height="60" fill="#4caf50" stroke="#388e3c" stroke-width="1" />
+  
+  <!-- Texto de los niveles con mejor posicionamiento y estilo -->
+  <text x="208" y="140" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Aún no satisfactorio</text>
+  <text x="441" y="140" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Satisfactorio</text>
+  <text x="633" y="140" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Sobresaliente</text>
+  
+  <!-- Escala con líneas de referencia y mejor legibilidad -->
+  <line x1="50" y1="225" x2="750" y2="225" stroke="#ccc" stroke-width="1" stroke-dasharray="4,2" />
+  <text x="50" y="240" font-size="12" text-anchor="middle" fill="#666">700</text>
+  <text x="366" y="240" font-size="12" text-anchor="middle" fill="#666">1000</text>
+  <text x="516" y="240" font-size="12" text-anchor="middle" fill="#666">1150</text>
+  <text x="750" y="240" font-size="12" text-anchor="middle" fill="#666">1300</text>
+  
+  <!-- Marcas de escala verticales -->
+  <line x1="50" y1="220" x2="50" y2="230" stroke="#666" stroke-width="1" />
+  <line x1="366" y1="220" x2="366" y2="230" stroke="#666" stroke-width="1" />
+  <line x1="516" y1="220" x2="516" y2="230" stroke="#666" stroke-width="1" />
+  <line x1="750" y1="220" x2="750" y2="230" stroke="#666" stroke-width="1" />
+  
+  <!-- Marcador del estudiante con línea punteada -->
+  <line x1="477" y1="100" x2="477" y2="225" stroke="#EF4044" stroke-width="2" stroke-dasharray="6,3" />
+  
+  <!-- Punto indicador con círculo rojo -->
+  <circle cx="477" cy="180" r="10" fill="#EF4044" />
+  <circle cx="477" cy="180" r="5" fill="#ffffff" />
+  
+  <!-- Etiqueta de puntaje con fondo y mejor visibilidad -->
+  <rect x="427" y="100" width="100" height="25" rx="12" ry="12" fill="#EF4044" />
+  <text x="477" y="117" text-anchor="middle" font-size="14" font-weight="bold" fill="white">1013 puntos</text>
+  
+  <!-- Leyenda y contexto -->
+  <text x="400" y="270" text-anchor="middle" font-size="14" fill="#333">Tu puntaje se encuentra en el nivel: <tspan font-weight="bold" fill="#4caf50">Satisfactorio</tspan></text>
+</svg>
+
+  <div class="container">
+    <div class="info-box">
+      <h2>Descripción de Áreas</h2>
+      
+      <div class="areas-container" style="display: flex; flex-direction: column; gap: 15px;">
+        <!-- Matriz de áreas con iconos -->
+        <div style="display: grid; grid-template-columns: 80px 1fr 1fr; gap: 20px; margin-bottom: 15px;">
+          <!-- Encabezados de perspectivas -->
+          <div style="grid-column: 2; text-align: center; font-weight: bold; padding: 12px; background-color: rgba(239, 64, 68, 0.1); border-radius: 5px; color: var(--primary); margin: 0 10px;">Perspectiva Sistémica</div>
+          <div style="grid-column: 3; text-align: center; font-weight: bold; padding: 12px; background-color: rgba(58, 126, 61, 0.1); border-radius: 5px; color: var(--accent); margin: 0 10px;">Perspectiva Prospectiva</div>
+          
+          <!-- Fila de comprensión -->
+          <div style="grid-column: 1; grid-row: 2; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; padding: 10px; background-color: rgba(154, 139, 125, 0.1); border-radius: 5px; color: var(--secondary);">COMPRENSIÓN</div>
+          
+          <!-- Área 1: Comprensión - Sistémica -->
+          <div style="grid-column: 2; grid-row: 2; padding: 15px; border-radius: 8px; background-color: white; border-left: 4px solid var(--primary); box-shadow: var(--box-shadow);">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background-color: var(--primary); display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </div>
+              <span style="font-weight: 600; color: var(--primary);">Comprensión Sistémica</span>
+            </div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.4; text-align: justify; text-justify: inter-word;">
+              Comprende el carácter multidimensional y complejo de la crisis global, sus características, manifestaciones y causas; así mismo, comprende la sustentabilidad desde una perspectiva holística e integrada.
+            </p>
+          </div>
+          
+          <!-- Área 3: Comprensión - Prospectiva -->
+          <div style="grid-column: 3; grid-row: 2; padding: 15px; border-radius: 8px; background-color: white; border-left: 4px solid var(--accent); box-shadow: var(--box-shadow);">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background-color: var(--accent); display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <span style="font-weight: 600; color: var(--accent);">Comprensión Prospectiva</span>
+            </div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+              Comprende la crisis global y la sustentabilidad con una perspectiva de futuro.
+            </p>
+          </div>
+          
+          <!-- Fila de solución -->
+          <div style="grid-column: 1; grid-row: 3; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; padding: 10px; background-color: rgba(154, 139, 125, 0.1); border-radius: 5px; color: var(--secondary);">SOLUCIÓN</div>
+          
+          <!-- Área 2: Solución - Sistémica -->
+          <div style="grid-column: 2; grid-row: 3; padding: 15px; border-radius: 8px; background-color: white; border-left: 4px solid var(--primary); box-shadow: var(--box-shadow);">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background-color: var(--primary); display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span style="font-weight: 600; color: var(--primary);">Solución Sistémica</span>
+            </div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+              Analiza opciones y elige cursos de acción que contribuyan a la sustentabilidad, a partir del análisis holístico e integrado del sistema en cuestión.
+            </p>
+          </div>
+          
+          <!-- Área 4: Solución - Prospectiva -->
+          <div style="grid-column: 3; grid-row: 3; padding: 15px; border-radius: 8px; background-color: white; border-left: 4px solid var(--accent); box-shadow: var(--box-shadow);">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background-color: var(--accent); display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span style="font-weight: 600; color: var(--accent);">Solución Prospectiva</span>
+            </div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+              Considera los escenarios de futuro y anticipa posibles consecuencias a mediano y largo plazo de las decisiones que toma en el presente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+ 
+<div style="background-color: #f4f4f4; padding: 20px; font-family: Arial, sans-serif;">
+  <div style="background-color: #ed3a42; color: white; padding: 15px; border-radius: 10px 10px 0 0;">
+    <div style="display: flex; align-items: center;">
+      <svg viewBox="0 0 24 24" width="24" height="24" style="margin-right: 10px;">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" fill="none"/>
+      </svg>
+      <!-- Agregué color explícito y aumenté el peso de la fuente -->
+      <h2 style="margin: 0; font-size: 24px; color: white !important; font-weight: 600; opacity: 1;">Tu Resultado Es:</h2>
+    </div>
+  </div>
+  
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+    <!-- Sección combinada de Puntaje Total y Nivel de Dominio -->
+    <div style="flex: 1; min-width: 300px; background-color: white; border-radius: 5px; overflow: hidden;">
+      <div style="display: flex; flex-wrap: wrap;">
+        <!-- Puntaje Total -->
+        <div style="flex: 1; min-width: 150px;">
+          <div style="background-color: #ed3a42; color: white; padding: 10px;">
+            <div style="display: flex; align-items: center;">
+              <svg viewBox="0 0 24 24" width="18" height="18" style="margin-right: 5px;">
+                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" fill="white"/>
+              </svg>
+              <span style="font-weight: bold; color: white !important; opacity: 1;">Puntaje Total</span>
+            </div>
+          </div>
+          <div style="padding: 20px; text-align: center;">
+            <h2 style="font-size: 48px; color: #ed3a42; margin: 0;">1013</h2>
+          </div>
+        </div>
+        
+        <!-- Nivel de Dominio -->
+        <div style="flex: 1; min-width: 150px;">
+          <div style="background-color: #3b8c4f; color: white; padding: 10px;">
+            <div style="display: flex; align-items: center;">
+              <svg viewBox="0 0 24 24" width="18" height="18" style="margin-right: 5px;">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="white"/>
+              </svg>
+              <span style="font-weight: bold; color: white !important; opacity: 1;">Nivel de Dominio</span>
+            </div>
+          </div>
+          <div style="padding: 20px; text-align: center;">
+            <div style="display: inline-block; background-color: #e8f4e9; color: #3b8c4f; padding: 5px 15px; border-radius: 20px; font-weight: bold;">Satisfactorio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Nueva sección con títulos actualizados -->
+  <div style="background-color: white; border-radius: 5px; padding: 20px; margin-top: 10px;">
+    <h3 style="color: #a1887f; margin-top: 0; font-size: 18px; opacity: 1;">Descripción de nivel</h3>
+    <div style="padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; margin-top: 10px;">
+      <p style="margin: 0; line-height: 1.5; color: #333; opacity: 1;">
+        El sustentante ha desarrollado adecuadamente la competencia para la sustentabilidad. Comprende los fundamentos del pensamiento crítico, sistémico y prospectivo, y los aplica en el análisis de problemas socioambientales. Propone soluciones informadas y multidimensionales, reconoce la necesidad de transformaciones estructurales y manifiesta un compromiso ético con la justicia social y la sostenibilidad. Participa activamente en procesos de transformación en diversos ámbitos de su vida.
+      </p>
+    </div>
+    
+    <div style="margin-top: 20px;">
+      <h3 style="color: #a1887f; margin-top: 0; font-size: 18px; opacity: 1;">Áreas de Mejora</h3>
+      <p style="color: #5d4037; margin-top: 10px; opacity: 1;">Los estudiantes en este nivel pueden hacer lo siguiente para mejorar:</p>
+      <ul style="color: #5d4037; opacity: 1;">
+        <li style="margin-bottom: 10px;">Profundizar en el análisis prospectivo de escenarios.</li>
+        <li style="margin-bottom: 10px;">Desarrollar capacidad de anticipación de consecuencias.</li>
+        <li style="margin-bottom: 10px;">Desarrollar proyectos interdisciplinarios.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+        
+
+        
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  <div class="footer">
+    <!-- Logo IBERO en el footer (versión gris) -->
+    <img src="">
+    
+    <!-- Logo de sustentabilidad en el footer -->
+<div class="institutional-info">
+  <img src="DIE.png" alt="DIE" class="DIE" style="width: 200px !important; height: auto !important; max-width: none !important;">
+  <h3>Dirección de Innovación Educativa (DIE)</h3>
+  <p>Programa de Evaluación Educativa (PEE)</p>
+</div>
+    
+    <p>Universidad Iberoamericana Ciudad de México</p>
+    <p>© 2025 Todos los derechos reservados</p>
+  </div>
+</body>
+</html>
